@@ -35,6 +35,9 @@ public class CustomerController {
     public ResponseEntity<List<Customer>> listAll () {
         List<Customer> allCustomers = customerService.listAll();
         return ResponseEntity.ok(allCustomer);
-
+}
+        @GetMapping("/customerName")
+    private List<Customer> getByCustomerName(@RequestParam String firstLetter){
+        return customerService.getByCustomerName(firstLetter);
     }
 }
