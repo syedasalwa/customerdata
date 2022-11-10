@@ -9,5 +9,6 @@ import java.util.List;
 
 @Repository
 public interface CustomerRepo extends JpaRepository<Customer, Long> {
+    List<Customer>findByNameStartingWith(String name);
 
 }
