@@ -22,8 +22,8 @@ public class CustomerController {
         return new ResponseEntity<>(HttpStatus.CREATED);
     }
     @PutMapping
-    public ResponseEntity<Void> updated(@RequestBody Customer student) {
-        customerService.save(student);
+    public ResponseEntity<Void> updated(@RequestBody Customer customer) {
+        customerService.save(customer);
         return new ResponseEntity<>(HttpStatus.ACCEPTED);
     }
     @DeleteMapping("/deleteByCustomerId")
