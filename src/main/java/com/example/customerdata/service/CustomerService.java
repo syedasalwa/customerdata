@@ -27,5 +27,8 @@ public class CustomerService {
         Customer customer = customerRepo.findById(customerId).orElse(new Customer());
         return customer;
     }
+    public List<Customer> getByCustomerName(String name) {
+        return customerRepo.findByNameStartingWith(name);
+    }
 }
 
