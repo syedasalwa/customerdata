@@ -33,8 +33,8 @@ public class CustomerController {
     }
     @GetMapping("/listAll")
     public ResponseEntity<List<Customer>> listAll () {
-        List<Customer> allStudents = customerService.listAll();
-        return ResponseEntity.ok(allStudents);
+        List<Customer> allCustomers = customerService.listAll();
+        return ResponseEntity.ok(allCustomer);
 
     }
 }
